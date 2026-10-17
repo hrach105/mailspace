@@ -26,7 +26,7 @@ jobs:
           import os, urllib.parse
           for k in ('ARM64_URL','X64_URL'):
             u=urllib.parse.urlparse(os.environ[k])
-            assert u.scheme=='https' and u.hostname=='productionresultssa2.blob.core.windows.net'
+            assert u.scheme=='https' and u.hostname=='productionresultssa12.blob.core.windows.net'
           PY
           curl --fail --silent --show-error --location "$ARM64_URL" -o arm64.zip
           curl --fail --silent --show-error --location "$X64_URL" -o x64.zip
