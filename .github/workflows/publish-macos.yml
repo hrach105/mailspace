@@ -30,12 +30,12 @@ jobs:
           PY
           curl --fail --silent --show-error --location "$ARM64_URL" -o arm64.zip
           curl --fail --silent --show-error --location "$X64_URL" -o x64.zip
-          echo '0792adefab53743b3c9d1581685b6d2319cea0c0da906d83ca0412e17629a7ab  arm64.zip' | sha256sum -c -
-          echo 'a26cf6844e6739012f0017ca1c43aca4d3dbcecdeac2db04d7168fcfb8a53e1f  x64.zip' | sha256sum -c -
+          echo '689097d31aa22fe9ce06247e8d1645cea9809c4dcedc1f593ac0abd29d3ed4df  arm64.zip' | sha256sum -c -
+          echo '506ce6726adbf5ff3f6835d73217b1fd3c543c9fc7b09f799f79b18ca1e72019  x64.zip' | sha256sum -c -
           unzip -q arm64.zip -d arm64
           unzip -q x64.zip -d x64
           (cd arm64 && sha256sum -c Mailspace-macOS-arm64-SHA256SUMS.txt)
           (cd x64 && sha256sum -c Mailspace-macOS-x64-SHA256SUMS.txt)
       - name: Publish DMGs and checksums to existing beta release
         run: |
-          gh release upload v0.3.1-beta arm64/*.dmg arm64/*SHA256SUMS.txt x64/*.dmg x64/*SHA256SUMS.txt --clobber
+          gh release upload v0.3.2-beta arm64/*.dmg arm64/*SHA256SUMS.txt x64/*.dmg x64/*SHA256SUMS.txt --clobber
