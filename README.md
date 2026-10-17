@@ -1,12 +1,12 @@
-# Mailspace 0.3.0 — Pro tester beta
+# Mailspace 0.3.1 — Brighter workspace beta
 
 Multiple Gmail accounts, Calendar and Drive file-name search in one Windows desktop app.
 
-[Website](https://mailspace-desktop.neatshark1024.chatgpt.site/) · [Download Windows installer 0.3.0](https://github.com/hrach105/mailspace/releases/download/v0.3.0-beta/Mailspace-0.3.0-Setup.exe) · [Release notes and checksum](https://github.com/hrach105/mailspace/releases/tag/v0.3.0-beta)
+[Website](https://mailspace-desktop.neatshark1024.chatgpt.site/) · [Download Windows installer 0.3.1](https://github.com/hrach105/mailspace/releases/download/v0.3.1-beta/Mailspace-0.3.1-Setup.exe) · [Release notes and checksum](https://github.com/hrach105/mailspace/releases/tag/v0.3.1-beta)
 
-## New in this release
+## Features
 
-- Clear Read / Unread appearance.
+- Brighter blue/violet light and dark palettes and clear Read / Unread states.
 - Pro client workspaces: related mail across accounts, private notes and matching Calendar meetings.
 - Pro follow-up reminders: detect replies in the tracked Gmail thread while the app is open.
 - Pro response templates: insert saved text without losing your draft.
