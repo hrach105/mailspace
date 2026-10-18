@@ -26,16 +26,16 @@ jobs:
           import os, urllib.parse
           for k in ('ARM64_URL','X64_URL'):
             u=urllib.parse.urlparse(os.environ[k])
-            assert u.scheme=='https' and u.hostname=='productionresultssa16.blob.core.windows.net'
+            assert u.scheme=='https' and u.hostname=='productionresultssa17.blob.core.windows.net'
           PY
           curl --fail --silent --show-error --location "$ARM64_URL" -o arm64.zip
           curl --fail --silent --show-error --location "$X64_URL" -o x64.zip
-          echo 'fd5f6edf970bd498b892e6c534ed563abe04ff4f6df0a17f35c7ec618a524c5b  arm64.zip' | sha256sum -c -
-          echo 'd645444458af33fc51fc07380552b97b629f7a91ad13eb8132ed28844cb719bd  x64.zip' | sha256sum -c -
+          echo 'ce3ed81c4f0ce63f3f611d0c516f55a7c4c1fae34ab07877ce998e24801fc35e  arm64.zip' | sha256sum -c -
+          echo 'cf7e413fcd418e35103f3c2d99f5b96ca6246beec6a5d749bce1f5554da0cc25  x64.zip' | sha256sum -c -
           unzip -q arm64.zip -d arm64
           unzip -q x64.zip -d x64
           (cd arm64 && sha256sum -c Mailspace-macOS-arm64-SHA256SUMS.txt)
           (cd x64 && sha256sum -c Mailspace-macOS-x64-SHA256SUMS.txt)
       - name: Publish DMGs and checksums to existing beta release
         run: |
-          gh release upload v0.3.3-beta arm64/*.dmg arm64/*SHA256SUMS.txt x64/*.dmg x64/*SHA256SUMS.txt --clobber
+          gh release upload v0.3.4-beta arm64/*.dmg arm64/*SHA256SUMS.txt x64/*.dmg x64/*SHA256SUMS.txt --clobber
